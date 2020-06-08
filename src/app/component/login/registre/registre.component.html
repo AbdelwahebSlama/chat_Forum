@@ -1,0 +1,110 @@
+<div class="py-5">
+  <div class="row ">
+    <div class="col-md-5 mx-auto">
+      <div id="first">
+        <div class="myform form ">
+          <div class="logo mb-3">
+            <div class="col-md-12 text-center">
+              <h1>Créez une compte</h1>
+            </div>
+          </div>
+          <form #registreForm="ngForm" name="registration">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nom</label>
+              <input
+                #nomControl="ngModel" ngModel required minlength="3"
+                type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp"
+                placeholder="Enter votre Nom">
+              <div
+                *ngIf="!nomControl.valid&& nomControl.touched"
+                class="alert alert-danger">
+                Veuillez renseigner un nom
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Prénom</label>
+              <input
+                #prenomControl="ngModel" ngModel required minlength="3"
+                type="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp"
+                placeholder="Enter votre Prénom">
+              <div
+                *ngIf="!prenomControl.valid&& prenomControl.touched"
+                class="alert alert-danger">
+                Veuillez renseigner un prénom
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                #emailControl="ngModel" ngModel required email
+                type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Enter votre email">
+              <div
+                *ngIf="!emailControl.valid&& emailControl.touched"
+                class="alert alert-danger">
+                Veuillez renseigner un email valid
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Image</label>
+                <input ngModel
+                       type="file" name="image" class="form-control" id="image" aria-describedby="emailHelp"
+                       (change)="onSelectedFile($event)">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Liste des groupes</label>
+              <select
+                #grpControl="ngModel" ngModel required
+                class="form-control" name="groupId" id="list">
+                <option
+                  *ngFor="let group of listgroupe"
+                  value="{{group._id}}">{{group.nomGroup}}</option>
+              </select>
+              <div
+                *ngIf="!grpControl.valid&& grpControl.touched"
+                class="alert alert-danger">
+                Il faut selectionner un groupe !!!
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Mot de passe</label>
+              <input
+                #pwdControl="ngModel" ngModel required minlength="4"
+                type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp"
+                placeholder="Enter votre Mot de passe">
+              <div
+                *ngIf="!pwdControl.valid&& pwdControl.touched"
+                class="alert alert-danger">
+                La taille du passeword doit être d'au moins 4 caractères.
+              </div>
+            </div>
+            <div class="col-md-12 text-center mb-3">
+              <button
+                [disabled]="registreForm.invalid"
+                (click)="registre(registreForm)"
+                type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">
+                Créez votre compte
+              </button>
+            </div>
+            <br *ngIf="erroMessage.length">
+            <div
+              *ngIf="erroMessage.length"
+              class="alert alert-danger">
+              {{erroMessage}}
+            </div>
+            <div class="col-md-12 ">
+              <div class="form-group">
+                <p class="text-center"><a
+                  routerLinkActive="active"
+                  [routerLink]="['login']"
+                  id="signin">avez vous une compte ?</a></p>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <!--        </form>-->
+      </div>
+    </div>
+  </div>
+</div>

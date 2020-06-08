@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-lg-4 overflow-auto">
+    <app-liste-amis></app-liste-amis>
+  </div>
+  <div class="col-md-8 ">
+    <div *ngIf="alertMessage.length"
+         class="alert alert-success">
+      {{alertMessage}}
+    </div>
+    <div *ngIf="alertMessageQuite.length"
+         class="alert alert-danger">
+      {{alertMessageQuite}}
+    </div>
+    <app-status></app-status>
+    <app-chat-message></app-chat-message>
+
+<!--    <app-chat></app-chat>-->
+  </div>
+</div>
+

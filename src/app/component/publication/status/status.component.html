@@ -1,0 +1,71 @@
+<!--Section: Comments-->
+<section class="my-5">
+  <app-zone-text></app-zone-text>
+  <!-- Card header -->
+  <div class="card-header border-0 font-weight-bold">{{listStatus.length}} publications</div>
+  <div *ngFor="let status of listStatus | paginate: {
+   id: 'list_paginate',
+   itemsPerPage: 5,
+   currentPage: page,
+   totalItems: totalRec
+
+  }; let index = index;"
+       class="media d-block d-md-flex mt-4">
+    <img class="card-img-64 d-flex mx-auto mb-3" src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg"
+         alt="Generic placeholder image">
+    <div
+      class="media-body text-center text-md-left ml-md-3 ml-0">
+      <h5 class="font-weight-bold mt-0 text-primary">
+        {{ status.username}}
+        <a class="pull-right">
+          <i class="fas fa-reply"> </i>
+        </a>
+      </h5>
+      {{ status.content }}
+      <br *ngIf="status.title != '' ">
+      <div *ngIf="status.title != '' " class="embed-responsive embed-responsive-16by9">
+        <youtube-player
+          [videoId]="status.title"
+          (ready)="savePlayer($event)"
+          (change)="onStateChange($event)"
+        ></youtube-player>
+      </div>
+      <br>
+      <p class="text-muted">
+        {{status.datecreation | date}}
+      </p>
+      <div class="font-weight-bold mt-0 text-primary">
+        <li class="far fa-comments font-weight-normal">
+          <a (click)="show(index, status._id)">
+            {{status.comments.length}}commente
+          </a>
+        </li>
+        <span class="float-left font-weight-bold">
+              <strong></strong>
+        </span>
+        <span class="float-right text-danger">
+              <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist">
+                <mdb-icon fas icon="heart" class="ml-3"></mdb-icon>
+              </a>
+        </span>
+      </div>
+      <!--      *ngFor="let comment of status.comments"-->
+      <div *ngIf="index == bool && isvalide == true" style="{{this.display }} : {{this.style}};">
+        <app-sous-commentaire
+          *ngFor="let comment of status.comments"
+          [sousComment]="comment"></app-sous-commentaire>
+        <app-zone-text-sous-comment [index]="index" [idMessage]="idSouComment"></app-zone-text-sous-comment>
+      </div>
+    </div>
+  </div>
+  <!--Pagination -->
+  <nav class="d-flex justify-content-center mt-5">
+    <div>
+      <pagination-controls id="list_paginate" maxSize="5" directionLinks="true"
+                           (pageChange)="page= $event"></pagination-controls>
+    </div>
+  </nav>
+  <!--Pagination -->
+
+</section>
+<!--Section: Comments-->

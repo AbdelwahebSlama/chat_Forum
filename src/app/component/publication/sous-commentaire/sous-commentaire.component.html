@@ -1,0 +1,17 @@
+<!--*ngFor="let sousComment of listSousComment"-->
+<div
+  class="media d-block d-md-flex mt-4">
+  <img class="card-img-64 d-flex mx-auto mb-3" src="https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg"
+       alt="Generic placeholder image">
+  <div class="media-body text-center text-md-left ml-md-3 ml-0">
+    <h5 class="font-weight-bold mt-0 text-primary">
+      {{sousComment.username}}
+      <a  class="pull-right text-primary">
+        <i class="fas fa-reply"></i>
+      </a>
+    </h5>
+    {{sousComment.content}}
+    <br>
+    {{sousComment.datecreation | date}}
+  </div>
+</div>

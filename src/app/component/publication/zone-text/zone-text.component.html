@@ -1,0 +1,11 @@
+<div class="form-group mt-4">
+  <label for="quickReplyFormComment">Your comment</label>
+  <textarea [(ngModel)]="messageText" class="form-control" id="quickReplyFormComment" rows="3"></textarea>
+
+  <i class="fas fa-paperclip mr-2 dark-grey-text">
+   <label for="quickReplyFormComment">Your Video Link </label></i>
+  <input [(ngModel)]="title" type="text" class="form-control">
+  <div class="text-center my-4">
+    <button (click)="sendMessage()" class="btn btn-primary btn-sm" type="submit">Post</button>
+  </div>
+</div>

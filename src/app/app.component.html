@@ -1,0 +1,132 @@
+<!--&lt;!&ndash; Main layout &ndash;&gt;-->
+<!--<main class="mt-n5">-->
+<!--  <div class="container">-->
+
+<!--    &lt;!&ndash; Grid row &ndash;&gt;-->
+<!--    <div class="row d-flex flex-row-reverse">-->
+
+<!--      &lt;!&ndash; Grid column &ndash;&gt;-->
+<!--      <div class="col-md-6 mb-4 d-flex flex-row-reverse">-->
+
+<!--        <mdb-card class="chat-room small-chat wide" id="myForm">-->
+<!--          <mdb-card-header class="white d-flex justify-content-between p-2" id="toggle" style="cursor: pointer;">-->
+<!--            <div class="heading d-flex justify-content-start">-->
+<!--              <div class="profile-photo">-->
+<!--                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="avatar"-->
+<!--                     class="avatar rounded-circle mr-2 ml-0">-->
+<!--                <span class="state"></span>-->
+<!--              </div>-->
+<!--              <div class="data">-->
+<!--                <p class="name mb-0"><strong>John Smith</strong></p>-->
+<!--                <p class="activity text-muted mb-0">Active now</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="icons grey-text">-->
+<!--              <a class="feature">-->
+<!--                <mdb-icon fas icon="video" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a class="feature">-->
+<!--                <mdb-icon fas icon="phone" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a class="feature">-->
+<!--                <mdb-icon fas icon="cog" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a type="button" id="closeButton">-->
+<!--                <mdb-icon fas icon="times" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </mdb-card-header>-->
+<!--          <div class="my-custom-scrollbar">-->
+<!--            <mdb-card-body class="p-3">-->
+<!--              <div class="chat-message">-->
+<!--                <div class="media mb-3">-->
+<!--                  <img class="d-flex rounded mr-2" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"-->
+<!--                       alt="Generic placeholder image">-->
+<!--                  <div class="media-body">-->
+<!--                    <p class="my-0">You're friends on Facebook</p>-->
+<!--                    <p class="mb-0 text-muted">Web Designer at MDBootstrap</p>-->
+<!--                    <p class="mb-0 text-muted">Lives in Paris</p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <mdb-card bgColor="bg-primary" class="rounded w-75 float-right z-depth-0 mb-1">-->
+<!--                  <mdb-card-body class="p-2">-->
+<!--                    <mdb-card-text class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit voluptatem-->
+<!--                      cum eum tempore.-->
+<!--                    </mdb-card-text>-->
+<!--                  </mdb-card-body>-->
+<!--                </mdb-card>-->
+<!--                <mdb-card bgColor="bg-primary" class="rounded w-50 float-right z-depth-0 mb-2">-->
+<!--                  <mdb-card-body class="p-2">-->
+<!--                    <mdb-card-text class="text-white">Rem suscipit lorum repellendus ditiis?</mdb-card-text>-->
+<!--                  </mdb-card-body>-->
+<!--                </mdb-card>-->
+<!--                <mdb-card bgColor="bg-light" class="rounded w-75 z-depth-0 mb-2 message-text">-->
+<!--                  <mdb-card-body class="p-2">-->
+<!--                    <mdb-card-text class="black-text">Nostrum minima cupiditate assumenda, atque cumque hic voluptatibus-->
+<!--                      at corporis maxime quam harum.-->
+<!--                    </mdb-card-text>-->
+<!--                  </mdb-card-body>-->
+<!--                </mdb-card>-->
+<!--                <div class="d-flex justify-content-start">-->
+<!--                  <div class="profile-photo message-photo">-->
+<!--                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="avatar"-->
+<!--                         class="avatar rounded-circle mr-2 ml-0">-->
+<!--                    <span class="state"></span>-->
+<!--                  </div>-->
+<!--                  <mdb-card bgColor="bg-light" class="rounded w-75 z-depth-0 mb-2">-->
+<!--                    <mdb-card-body class="p-2">-->
+<!--                      <mdb-card-text class="black-text">Qui animi molestiae autem nihil optio recusandae nisi sit ab quo-->
+<!--                        est.-->
+<!--                      </mdb-card-text>-->
+<!--                    </mdb-card-body>-->
+<!--                  </mdb-card>-->
+<!--                </div>-->
+<!--                <mdb-card bgColor="bg-primary" class="rounded w-75 float-right z-depth-0 mb-2">-->
+<!--                  <mdb-card-body class="p-2">-->
+<!--                    <mdb-card-text class="text-white">Maxime nostrum ut blanditiis a quod quam, quidem deleniti?-->
+<!--                    </mdb-card-text>-->
+<!--                  </mdb-card-body>-->
+<!--                </mdb-card>-->
+<!--              </div>-->
+<!--            </mdb-card-body>-->
+<!--          </div>-->
+<!--          <mdb-card-footer class="text-muted white pt-1 pb-2 px-3">-->
+<!--            <input type="text" id="exampleForm2" class="form-control" placeholder="Type a message...">-->
+<!--            <div>-->
+<!--              <a>-->
+<!--                <mdb-icon far icon="file-image" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a>-->
+<!--                <mdb-icon far icon="laugh" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a>-->
+<!--                <mdb-icon fas icon="gamepad" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a>-->
+<!--                <mdb-icon fas icon="paperclip" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a>-->
+<!--                <mdb-icon fas icon="camera" class="mr-2"></mdb-icon>-->
+<!--              </a>-->
+<!--              <a>-->
+<!--                <mdb-icon fas icon="thumbs-up" class="float-right"></mdb-icon>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </mdb-card-footer>-->
+
+<!--        </mdb-card>-->
+
+<!--      </div>-->
+<!--      &lt;!&ndash; Grid column &ndash;&gt;-->
+
+<!--    </div>-->
+<!--    &lt;!&ndash; Grid row &ndash;&gt;-->
+
+<!--  </div>-->
+<!--</main>-->
+
+
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<!--<app-chat-message></app-chat-message>-->

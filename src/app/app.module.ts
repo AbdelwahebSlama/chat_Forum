@@ -7,7 +7,6 @@ import { MDBBootstrapModule, DropdownModule, ModalModule, TooltipModule, Popover
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AccordionModule} from 'ng-uikit';
-import { ChatComponent } from './chat/chat.component';
 import { DiscuterComponent } from './discuter/discuter.component';
 import { LoginComponent } from './component/login/login/login.component';
 import { GroupeComponent } from './component/groupe/groupe.component';
@@ -35,7 +34,6 @@ import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent,
     DiscuterComponent,
     LoginComponent,
     GroupeComponent,
